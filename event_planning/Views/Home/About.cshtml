@@ -1,0 +1,42 @@
+﻿@model event_planning.Models.Event
+@{
+    ViewBag.Title = "Администратор";
+}
+
+<br />
+<div>
+    @Html.ActionLink("Пользователи", "GetUsers", "Home")<br />
+    @Html.ActionLink("Мои роли", "GetMyRoles", "Home")
+</div>
+<h3>Добавление мероприятия</h3><br />
+<div>
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(model => model.Name, "Название")
+        <br />
+        @Html.EditorFor(model => model.Name)
+        <br /><br />
+        @Html.LabelFor(model => model.theme, "Тема")
+        <br />
+        @Html.EditorFor(model => model.theme)
+        <br /><br />
+        @Html.LabelFor(model => model.location, "Местоположение")
+        <br />
+        @Html.EditorFor(model => model.location)
+        <br /><br />
+        @Html.LabelFor(model => model.field_1, "Дата и время")
+        <br />
+        @Html.EditorFor(model => model.field_1)
+        <br /><br />
+        <div id="field_2" style="display: none;">@Html.EditorFor(model => model.field_2)<br /><br /></div>
+        
+        <div id="field_3" style="display: none;">@Html.EditorFor(model => model.field_3)<br /><br /></div>
+        
+        <div id="field_4" style="display: none;">@Html.EditorFor(model => model.field_4)<br /><br /></div>
+        
+        <div id="field_5" style="display: none;">@Html.EditorFor(model => model.field_5)<br /><br /></div>
+        
+        <div id="but_field"><a onclick="getfield()" style="cursor: pointer;">+ Добавить поле</a><br /><br /></div>
+        <input type="submit" onclick="add_event()" value="Добавить" />
+    }
+</div>

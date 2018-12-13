@@ -1,0 +1,33 @@
+﻿@model IEnumerable<event_planning.Models.Participant>
+@using Microsoft.AspNet.Identity
+
+@{
+    ViewBag.Title = "Мои события";
+}
+
+<h2>Мои события</h2>
+<div>
+    <br /><p>Пользователь @User.Identity.GetUserName()</p>
+    <table class="table">
+        <tr>
+            <td><p>ID</p></td>
+            <td><p>Название</p></td>
+        </tr>
+        @foreach (var item in Model)
+        {
+            if (User.Identity.GetUserName() == item.User)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+</div>
+
+

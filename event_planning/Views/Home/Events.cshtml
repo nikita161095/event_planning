@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "Мероприятия";
+}
+
+<h2>Мероприятия</h2>
+
+<br />
+<div>
+    <table id="events_table">
+        <tr id="tr1">
+            <td><p>Название</p></td>
+            <td><p>Тема</p></td>
+            <td><p>Местоположение</p></td>
+            <td></td>
+        </tr>
+        @foreach (event_planning.Models.Event b in Model)
+        {
+            <tr id="tr2">
+                <td><p>@b.Name</p></td>
+                <td><p>@b.theme</p></td>
+                <td><p>@b.location</p></td>
+                <td><p><a href="/Home/Reg/@b.Id">Регистрация</a></p></td>
+            </tr>
+        }
+    </table>
+</div>
+
