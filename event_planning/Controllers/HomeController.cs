@@ -65,7 +65,6 @@ namespace event_planning.Controllers
         public ActionResult Events()
         {
             ApplicationDbContext db = new ApplicationDbContext();
-
             return View(db.Events);
         }
 
@@ -74,6 +73,28 @@ namespace event_planning.Controllers
         public ActionResult Reg(int id)
         {
             ApplicationDbContext db = new ApplicationDbContext();
+            int e_id = id;
+            bool page = false;
+            foreach (var item in db.Events)
+            {
+                if(e_id == item.Id)
+                {
+                    page = true;
+                    break;
+                }
+            }
+            if(page == false)
+            {
+                return View("Error");
+            }
+            foreach (var item in db.Participants)
+            {
+                if (User.Identity.GetUserName() == item.User & e_id == item.EventId)
+                {
+                    ViewBag.f_reg = true;
+                }
+            }
+
             Event eventid = db.Events.Find(id);
             return View(eventid);
         }
@@ -93,6 +114,7 @@ namespace event_planning.Controllers
                     }
                 }
                 participant.User = User.Identity.GetUserName();
+                participant.EventId = participant.Id;
                 db.Participants.Add(participant);
                 db.SaveChanges();
             }

@@ -24,13 +24,21 @@
     <h4>@Model.field_3</h4>
     <h4>@Model.field_4</h4>
     <h4>@Model.field_5</h4>
+
+    <br />
+    @if (ViewBag.f_reg == true)
+    {
+        <p style="color: green;">Вы зарегистрированы</p>
+    }
+
     @using (Html.BeginForm("Reg", "Home", FormMethod.Post))
     {
         <fieldset>
             <p>
                 @Html.HiddenFor(m => m.Name)
+                @Html.HiddenFor(m => m.Id)
             </p>
-            <p><input type="submit" value="Отправить" /></p>
+            <p><input type="submit" value="Зарегистрироваться" /></p>
         </fieldset>
     }
 </div>

@@ -134,3 +134,4 @@ C:\disk\C#\ASP\event_planning\event_planning\obj\Debug\event_planning.Migrations
 C:\disk\C#\ASP\event_planning\event_planning\obj\Debug\event_planning.csproj.GenerateResource.cache
 C:\disk\C#\ASP\event_planning\event_planning\obj\Debug\event_planning.Migrations.DataMigration.resources
 C:\disk\C#\ASP\event_planning\event_planning\obj\Debug\event_planning.Migrations.DataMigration1.resources
+C:\disk\C#\ASP\event_planning\event_planning\obj\Debug\event_planning.Migrations.DataMigration2.resources

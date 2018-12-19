@@ -1,10 +1,15 @@
 ﻿function add_event() {
-    alert("Мероприятие добавлено!");
+    var name = document.getElementById("formname").value;
+    if (name === "" || name === " ") {
+        alert("Поле 'Название' не заполнено!");
+    } else {
+        alert("Мероприятие добавлено!");
+    }
 }
 
 var id_num = 1;
 var id;
-function getfield() {
+function addfield() {
     id_num++;
     if (id_num !== 5) {
         id = "field_" + id_num;

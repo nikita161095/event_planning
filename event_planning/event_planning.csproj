@@ -212,6 +212,10 @@
     <Compile Include="Migrations\201812112346017_DataMigration1.Designer.cs">
       <DependentUpon>201812112346017_DataMigration1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812142358490_DataMigration2.cs" />
+    <Compile Include="Migrations\201812142358490_DataMigration2.Designer.cs">
+      <DependentUpon>201812142358490_DataMigration2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -312,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812112346017_DataMigration1.resx">
       <DependentUpon>201812112346017_DataMigration1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812142358490_DataMigration2.resx">
+      <DependentUpon>201812142358490_DataMigration2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

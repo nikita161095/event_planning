@@ -14,7 +14,8 @@
     {
         @Html.LabelFor(model => model.Name, "Название")
         <br />
-        @Html.EditorFor(model => model.Name)
+        @*@Html.EditorFor(model => model.Name)*@
+        <input type="text" name="Name" id="formname"/>
         <br /><br />
         @Html.LabelFor(model => model.theme, "Тема")
         <br />
@@ -29,14 +30,14 @@
         @Html.EditorFor(model => model.field_1)
         <br /><br />
         <div id="field_2" style="display: none;">@Html.EditorFor(model => model.field_2)<br /><br /></div>
-        
+
         <div id="field_3" style="display: none;">@Html.EditorFor(model => model.field_3)<br /><br /></div>
-        
+
         <div id="field_4" style="display: none;">@Html.EditorFor(model => model.field_4)<br /><br /></div>
-        
+
         <div id="field_5" style="display: none;">@Html.EditorFor(model => model.field_5)<br /><br /></div>
-        
-        <div id="but_field"><a onclick="getfield()" style="cursor: pointer;">+ Добавить поле</a><br /><br /></div>
+
+        <div id="but_field" class="but_field"><a onclick="addfield()" style="cursor: pointer;">+ Добавить поле</a><br /><br /></div>
         <input type="submit" onclick="add_event()" value="Добавить" />
     }
 </div>
