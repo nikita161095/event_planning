@@ -5,9 +5,19 @@
 
 <br />
 <div>
-    @Html.ActionLink("Пользователи", "GetUsers", "Home")<br />
-    @Html.ActionLink("Мои роли", "GetMyRoles", "Home")
-</div>
+    <ul class="nav navbar-nav">
+        <li>
+            @Html.ActionLink("Пользователи", "GetUsers", "Home")
+        </li>
+        <li>
+            @Html.ActionLink("Управление ролями", "Index", "Roles")
+        </li>
+        <li>
+            @Html.ActionLink("Мои роли", "GetMyRoles", "Home")
+        </li>
+    </ul>
+</div><br /><br />
+
 <h3>Добавление мероприятия</h3><br />
 <div>
     @using (Html.BeginForm())
@@ -38,6 +48,6 @@
         <div id="field_5" style="display: none;">@Html.EditorFor(model => model.field_5)<br /><br /></div>
 
         <div id="but_field" class="but_field"><a onclick="addfield()" style="cursor: pointer;">+ Добавить поле</a><br /><br /></div>
-        <input type="submit" onclick="add_event()" value="Добавить" />
+        <input type="submit" onclick="add_event()" class="btn btn-primary" value="Добавить" />
     }
 </div>

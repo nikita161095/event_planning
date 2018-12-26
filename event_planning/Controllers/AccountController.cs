@@ -151,6 +151,7 @@ namespace event_planning.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    UserManager.AddToRole(user.Id, "user");
                     // генерируем токен для подтверждения регистрации
                     var code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // создаем ссылку для подтверждения
@@ -416,6 +417,33 @@ namespace event_planning.Controllers
             }
 
             base.Dispose(disposing);
+        }
+
+
+
+        [HttpGet]
+        [Authorize(Roles = "admin")]
+        public ActionResult Delete()
+        {
+
+            return View();
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "admin")]
+        [ActionName("Delete")]
+        public async Task<ActionResult> DeleteConfirmed(string id)
+        {
+            ApplicationUser user = await UserManager.FindByIdAsync(id);
+            if (user != null)
+            {
+                IdentityResult result = await UserManager.DeleteAsync(user);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("GetUsers", "Home");
+                }
+            }
+            return RedirectToAction("Delete", "Account");
         }
 
         #region Вспомогательные приложения

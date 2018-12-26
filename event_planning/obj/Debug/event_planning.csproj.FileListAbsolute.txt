@@ -135,3 +135,6 @@ C:\disk\C#\ASP\event_planning\event_planning\obj\Debug\event_planning.csproj.Gen
 C:\disk\C#\ASP\event_planning\event_planning\obj\Debug\event_planning.Migrations.DataMigration.resources
 C:\disk\C#\ASP\event_planning\event_planning\obj\Debug\event_planning.Migrations.DataMigration1.resources
 C:\disk\C#\ASP\event_planning\event_planning\obj\Debug\event_planning.Migrations.DataMigration2.resources
+C:\disk\C#\ASP\event_planning\event_planning\obj\Debug\event_planning.Migrations.DataMigration3.resources
+C:\disk\C#\ASP\event_planning\event_planning\obj\Debug\event_planning.Migrations.DataMigration4.resources
+C:\disk\C#\ASP\event_planning\event_planning\obj\Debug\event_planning.Migrations.DataMigration5.resources

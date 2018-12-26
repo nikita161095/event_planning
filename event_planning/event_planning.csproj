@@ -197,6 +197,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -215,6 +216,18 @@
     <Compile Include="Migrations\201812142358490_DataMigration2.cs" />
     <Compile Include="Migrations\201812142358490_DataMigration2.Designer.cs">
       <DependentUpon>201812142358490_DataMigration2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812222344541_DataMigration3.cs" />
+    <Compile Include="Migrations\201812222344541_DataMigration3.Designer.cs">
+      <DependentUpon>201812222344541_DataMigration3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812230040263_DataMigration4.cs" />
+    <Compile Include="Migrations\201812230040263_DataMigration4.Designer.cs">
+      <DependentUpon>201812230040263_DataMigration4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812241721278_DataMigration5.cs" />
+    <Compile Include="Migrations\201812241721278_DataMigration5.Designer.cs">
+      <DependentUpon>201812241721278_DataMigration5.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -290,6 +303,11 @@
     <Content Include="Views\Home\Reg_success.cshtml" />
     <Content Include="Views\Home\Reg_fail.cshtml" />
     <Content Include="Views\Home\GetMyEvents.cshtml" />
+    <Content Include="Views\Account\Delete.cshtml" />
+    <Content Include="Views\Roles\Index.cshtml" />
+    <Content Include="Views\Roles\Create.cshtml" />
+    <Content Include="Views\Roles\Edit.cshtml" />
+    <Content Include="Views\Roles\UserRoleEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -319,6 +337,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812142358490_DataMigration2.resx">
       <DependentUpon>201812142358490_DataMigration2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812222344541_DataMigration3.resx">
+      <DependentUpon>201812222344541_DataMigration3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812230040263_DataMigration4.resx">
+      <DependentUpon>201812230040263_DataMigration4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812241721278_DataMigration5.resx">
+      <DependentUpon>201812241721278_DataMigration5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
