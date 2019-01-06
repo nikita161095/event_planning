@@ -25,19 +25,107 @@ textarea {
 
 #events_table {
     margin-top: 5px;
-    width: 1000px;
+    width: 100%;
     height: auto; /*250px;*/
     text-align: center;
+    /*border-collapse: separate;
+    border-spacing: 0px 5px;*/
 }
 
 #tr1 > td {
     border: 1px solid lightgrey;
-    height: 35px;
-    text-align: center;
+    height: 50px;
+    padding-top: 10px;
+    /*background-color: whitesmoke;*/
+    font-family: Georgia;
+    font-size: 21px;
 }
 
 #tr2 > td {
     border: 1px solid lightgrey;
-    height: 70px;
+    height: 80px;
+    padding-top: 10px;
+    /*background-color: whitesmoke;*/
+    font-family: Georgia;
+    font-size: 18px;
 }
 
+#tr3 > td {
+    height: 50px;
+}
+
+#reg {
+    font-family: Georgia;
+    font-size: 20px;
+}
+
+#index {
+    /*border: 1px solid black;*/
+    height: 350px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 20px 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#indextd {
+    border: 1px solid lightgrey;
+    width: 33%;
+    height: 305px;
+    /*display: inline-block;*/
+    /*height: 100%;*/
+    /*width: 31%;*/
+    /*margin: 0 1% 0 1%;*/
+    font-family: Georgia;
+}
+
+    #indextd:hover {
+        background-color: #f5f5f5; /*aliceblue;*/
+    }
+
+#indexa {
+    /*border: 1px solid black;*/
+    display: block;
+    height: 305px;
+    /*position: relative;*/
+    /*color: black;*/
+    text-decoration: none;
+}
+
+#indexname {
+    font-size: 28px;
+    padding-top: 45px;
+}
+
+#indextheme {
+    font-size: 22px;
+    padding-top: 20px;
+}
+
+#indexlocation {
+    font-size: 18px;
+    padding-top: 30px;
+}
+
+#indexfield {
+    font-size: 18px;
+}
+
+#field_2 {
+    max-height: 48px;
+    transition: all 220ms ease-in-out;
+}
+
+#field_2:hover #field_3 {
+    max-height: 124px;
+}
+
+/*.theme_about{
+    width: 500px;
+}*/
+
+#formname {
+    width: 500px;
+    height: 30px;
+}

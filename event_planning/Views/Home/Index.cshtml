@@ -1,7 +1,24 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model IEnumerable<event_planning.Models.Event>
+@{
+    ViewBag.Title = "Event planning";
 }
 
-<div>
-
-</div>
+<table id="index">
+    <tr>
+        @foreach (var item in Model)
+        {
+            ViewBag.n++;
+            if (ViewBag.n == ViewBag.num || ViewBag.n == ViewBag.num + 1 || ViewBag.n == ViewBag.num + 2)
+            {
+                <td id="indextd">
+                    <a id="indexa" href="/Home/Reg/@item.Id">
+                    <p id="indexname">@Html.DisplayFor(modelItem => item.Name)</p>
+                    <p id="indextheme">@Html.DisplayFor(modelItem => item.theme)</p>
+                    <p id="indexlocation">@Html.DisplayFor(modelItem => item.location)</p>
+                    <p id="indexfield">@Html.DisplayFor(modelItem => item.field_1)</p>
+                    </a>
+                </td>
+            }
+        }
+    </tr>
+</table>

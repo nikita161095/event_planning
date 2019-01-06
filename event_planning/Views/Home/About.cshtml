@@ -24,30 +24,58 @@
     {
         @Html.LabelFor(model => model.Name, "Название")
         <br />
-        @*@Html.EditorFor(model => model.Name)*@
-        <input type="text" name="Name" id="formname"/>
+        @*@Html.EditorFor(model => model.Name, null, new { @class = "theme_about" })*@
+        <input type="text" name="Name" id="formname" />
         <br /><br />
         @Html.LabelFor(model => model.theme, "Тема")
         <br />
-        @Html.EditorFor(model => model.theme)
+        @*@Html.EditorFor(model => model.theme)*@
+        <input type="text" name="theme" id="formname" />
         <br /><br />
         @Html.LabelFor(model => model.location, "Местоположение")
         <br />
-        @Html.EditorFor(model => model.location)
+        @*@Html.EditorFor(model => model.location)*@
+        <input type="text" name="location" id="formname" />
         <br /><br />
         @Html.LabelFor(model => model.field_1, "Дата и время")
         <br />
-        @Html.EditorFor(model => model.field_1)
+        @*@Html.EditorFor(model => model.field_1)*@
+        <input type="text" name="field_1" id="formname" />
         <br /><br />
-        <div id="field_2" style="display: none;">@Html.EditorFor(model => model.field_2)<br /><br /></div>
+        <div id="field_2" style="display: none;">@*@Html.EditorFor(model => model.field_2)*@
+            <input type="text" name="field_2" id="formname" /><br /><br /></div>
 
-        <div id="field_3" style="display: none;">@Html.EditorFor(model => model.field_3)<br /><br /></div>
+        <div id="field_3" style="display: none;">@*@Html.EditorFor(model => model.field_3)*@
+            <input type="text" name="field_3" id="formname" /><br /><br /></div>
 
-        <div id="field_4" style="display: none;">@Html.EditorFor(model => model.field_4)<br /><br /></div>
+        <div id="field_4" style="display: none;">@*@Html.EditorFor(model => model.field_4)*@
+            <input type="text" name="field_4" id="formname" /><br /><br /></div>
 
-        <div id="field_5" style="display: none;">@Html.EditorFor(model => model.field_5)<br /><br /></div>
+        <div id="field_5" style="display: none;">@*@Html.EditorFor(model => model.field_5)*@
+            <input type="text" name="field_5" id="formname" /><br /><br /></div>
 
         <div id="but_field" class="but_field"><a onclick="addfield()" style="cursor: pointer;">+ Добавить поле</a><br /><br /></div>
         <input type="submit" onclick="add_event()" class="btn btn-primary" value="Добавить" />
     }
 </div>
+
+<script type="text/javascript">
+    var id_num = 1;
+    var id;
+    $(document).ready(function () {
+        $('.but_field').click(function () {
+            id_num++;
+            if (id_num !== 5) {
+                id = "#field_" + id_num;
+                $(id).toggle('normal');
+                return false;
+            } else {
+                id = "#field_" + id_num;
+                $(id).toggle('normal');
+                document.getElementById("but_field").style.display = 'none';
+                return false;
+            }
+
+        });
+    });
+</script>

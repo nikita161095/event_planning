@@ -14,7 +14,24 @@ namespace event_planning.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var e = 0;
+            var random = new Random();
+
+            List<Event> events = new List<Event>();
+            using (ApplicationDbContext db = new ApplicationDbContext())
+            {
+                foreach(var item in db.Events)
+                {
+                    e++;
+                }
+                var randomNumber = random.Next(1, e-1);
+                ViewBag.num = randomNumber;
+                ViewBag.n = 0;
+
+                events = db.Events.ToList();
+            }
+
+            return View(events);
         }
 
         [Authorize(Roles = "admin")]

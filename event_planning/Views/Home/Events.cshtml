@@ -6,23 +6,52 @@
 <h2>Мероприятия</h2>
 
 <br />
+@*<div>
+        <table id="events_table">
+            <tr id="tr1">
+                <td>Название</td>
+                <td>Тема</td>
+                <td>Местоположение</td>
+                <td></td>
+            </tr>
+            @foreach (event_planning.Models.Event b in Model)
+            {
+                <tr id="tr2">
+                    <td><p>@b.Name</p></td>
+                    <td><p>@b.theme</p></td>
+                    <td><p>@b.location</p></td>
+                    <td><p><a href="/Home/Reg/@b.Id">Регистрация</a></p></td>
+                </tr>
+            }
+        </table>
+    </div>*@
+
 <div>
     <table id="events_table">
-        <tr id="tr1">
-            <td><p>Название</p></td>
-            <td><p>Тема</p></td>
-            <td><p>Местоположение</p></td>
+        @*<tr id="tr1">
+            <td>Название</td>
+            <td>Тема</td>
+            <td>Местоположение</td>
             <td></td>
-        </tr>
+        </tr>*@
         @foreach (event_planning.Models.Event b in Model)
         {
+            <tr id="tr1">
+                <td colspan="4"><p>@b.Name</p></td>
+            </tr>
             <tr id="tr2">
-                <td><p>@b.Name</p></td>
-                <td><p>@b.theme</p></td>
-                <td><p>@b.location</p></td>
-                <td><p><a href="/Home/Reg/@b.Id">Регистрация</a></p></td>
+                <td><i>Тема</i><br /><p>@b.theme</p></td>
+                <td><i>Место</i><br /><p>@b.location</p></td>
+                <td style="width: 200px;"><p>@b.field_1</p></td>
+                <td style="width: 200px;"><p><a href="/Home/Reg/@b.Id">Регистрация</a></p></td>
+            </tr>
+            <tr id="tr3">
+                <td colspan="4"></td>
             </tr>
         }
     </table>
 </div>
 
+<div>
+
+</div>
